@@ -26,7 +26,7 @@ export async function getServerSideProps({
   params: { product: string };
 }) {
   const res = await fetch(
-    `http://localhost:3000/api/product/${params.product}`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/product/${params.product}`
   );
   const response = await res.json();
 
