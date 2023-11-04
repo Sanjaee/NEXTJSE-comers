@@ -1,0 +1,102 @@
+/* Gaya utama */
+.product {
+  width: 100%;
+  padding: 0 5%;
+}
+
+/* Judul */
+.product__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Konten Produk */
+.product__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Placeholder Produk (untuk tampilan loading) */
+.product__content__skeleton {
+  width: 25%;
+  padding: 10px;
+  animation: blinking 1s infinite;
+}
+
+.product__content__skeleton__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: gray;
+}
+
+.product__content__skeleton__name,
+.product__content__skeleton__catagory {
+  width: 100%;
+  height: 16px;
+  background-color: gray;
+  margin-top: 5px;
+}
+
+.product__content__skeleton__price {
+  width: 100%;
+  height: 16px;
+  margin-top: 10px;
+  background-color: gray;
+}
+
+/* Item Produk */
+.product__content__item {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Efek transisi untuk hover */
+}
+
+.product__content__item:hover {
+  transform: translateY(-5px); /* Menggeser elemen ke atas saat di-hover */
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3); /* Perubahan bayangan saat di-hover */
+}
+
+.product__content__item__name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.product__content__item__catagory {
+  color: gray;
+  margin-top: 5px;
+}
+
+.product__content__item__price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.product__content__item__image {
+  width: 200px;
+  height: 200px;
+
+  object-fit: cover;
+  border: 1px solid gray;
+}
+
+/* Media Queries untuk Responsivitas */
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
