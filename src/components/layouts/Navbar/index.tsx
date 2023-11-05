@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { signIn, useSession, signOut } from "next-auth/react";
 
@@ -6,7 +7,10 @@ const Navbar = () => {
   const { data }: any = useSession();
   return (
     <div className={styles.navbar}>
-      <div className="big">Navbar</div>
+      <Link href={"/"}>
+        <div className="big">Navbar</div>
+      </Link>
+
       <div className={styles.profile}>
         {data && data.user && (
           <>
