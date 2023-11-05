@@ -15,7 +15,7 @@ export default ProductPage;
 
 //pangil untuk req
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product`);
+  const res = await fetch(`${process.env.NEXT}/api/product`);
   const response = await res.json();
 
   return {
